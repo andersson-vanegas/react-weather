@@ -29,7 +29,7 @@ const WeatherInfo = (props) =>{
         </div>
         : 
         <div className="card card-body">
-            <p>No Request Yet</p>
+            <p>no hay requisitos</p>
         </div>
         }
     </React.Fragment>

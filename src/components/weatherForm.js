@@ -5,15 +5,15 @@ const WeatherForm = (props) => {
         <div className="card card-body">
             <form onSubmit={props.getWeather}>
                 <div>
-                    <input type='text' name="city" placeholder="le nom de ta ville" 
+                    <input type='text' name="city" placeholder="ingresa tu ciudad " 
                     className="form-control" autoFocus/>
                 </div>
                 <div className="form-group">
-                    <input type='text' name="country" placeholder="le nom de votre pays"
+                    <input type='text' name="country" placeholder="ingresa tu pais"
                     className="form-control"/>
                 </div>
                 <button className="btn btn-success btn-block">
-                    obtenir la météo
+                    Obtener clima de la ciudad
                 </button>
             </form>
         </div>
