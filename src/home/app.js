@@ -1,9 +1,13 @@
+
 const express = require('express');
 const { engine } = require('express-handlebars');
 const myconnection = require('express-myconnection');
 const mysql = require('mysql');
 const session = require('express-session');
 const bodyParser = require('body-parser');
+
+
+
 
 const LoginRoutes = require('./routes/login.js')
 
@@ -42,6 +46,14 @@ app.listen(app.get('port'), () => {
 
 app.use('/', LoginRoutes);
 
+
 app.get('/', (req, res) => {
-    res.render('home')
+    if(req.session.loggedin == true ) {
+        
+        res.render('src/indexhtml', {name: req.session.name });
+
+    } else {
+        res.redirect('/login');
+    }
 })
+
