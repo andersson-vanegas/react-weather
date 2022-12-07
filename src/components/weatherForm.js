@@ -1,21 +1,26 @@
 import React from "react";
+import './weatherForm.css'
 
 const WeatherForm = (props) => {
     return(
-        <div className="card card-body">
+        
+        <div className="form">
             <form onSubmit={props.getWeather}>
+
+                 <div className="">
+                    <input type='text' name="country" placeholder="ingresa tu pais"
+                    className=""/>
+                </div>
                 <div>
                     <input type='text' name="city" placeholder="ingresa tu ciudad " 
-                    className="form-control" autoFocus/>
+                    className="" autoFocus/>
                 </div>
-                <div className="form-group">
-                    <input type='text' name="country" placeholder="ingresa tu pais"
-                    className="form-control"/>
-                </div>
-                <button className="btn btn-success btn-block">
+
+                <button className="buttoncity">
                     Obtener clima de la ciudad
                 </button>
             </form>
+            
         </div>
     )
 }

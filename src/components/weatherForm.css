@@ -1,0 +1,34 @@
+.form{
+        position: absolute;
+        width: 500px;
+        height: 300px;
+        border-radius: 10px;
+        left: 45px;
+        top: 180px;
+        border: 4px solid #608094;
+        background: #16394c;
+    }
+input{
+    position: relative;
+    padding: 10px;
+    margin-top: 5px;
+    margin: 10px;
+    width: 90%;
+    background-color:#D8DBE2 ;
+    border-radius: 5px;
+    border: 4px solid #33658A ;
+    font-size: 20px;
+}
+
+button , .buttoncity
+{
+    position: relative;
+    margin-left: 100px;
+    border-radius: 10px;
+    padding: 20px 10px;
+    left: 20px;
+    top: 40px;
+    background-color: #FFFBFC;
+    border: 4px solid #608094;
+    font-size: 20px;
+}

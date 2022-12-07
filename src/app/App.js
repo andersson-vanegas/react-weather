@@ -1,7 +1,12 @@
 import React, { Component } from "react";
+import './app.css'
 import { WeatherInfo } from "../components/weatherInfo";
 import { WeatherForm } from "../components/weatherForm";
 import { WEATHER_KEY } from "./keys";
+
+
+
+
 class App extends Component {
 
     state ={
@@ -37,20 +42,33 @@ class App extends Component {
             error: null
         });
     } else{
-        this.setState({error: 'please enter a city and a country'})
+        this.setState({error: 'Por favor ingresa uan ciudad y un pais'})
     }
   }
 
   render() {
     return (
-      <div className="container p-4">
-        <div className="row">
-          <div className="col-md-6 mx-auto">
+      
+      <React.Fragment>
+      <nav>
+      
+      </nav>
+      <section>
+        <div className="wave wave1"></div>
+        <div className="wave wave2"></div>
+        <div className="wave wave3"></div>
+        <div className="wave wave4"></div>
+      </section>
+      <div className="">
+        <div className="">
+          <div className=" ">
             <WeatherForm getWeather={this.getWeather} />
             <WeatherInfo  {...this.state}/>
+            
           </div>
         </div>
       </div>
+      </React.Fragment>
     );
   }
 }

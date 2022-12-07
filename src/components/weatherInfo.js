@@ -1,4 +1,5 @@
 import React from "react";
+import './weatherInfo.css'
 
 const WeatherInfo = (props) =>{
 
@@ -7,18 +8,23 @@ const WeatherInfo = (props) =>{
     <React.Fragment>
         {
             props.error &&
-            <div className="alert alert-danger">
+            <div className="">
                 <p>{props.error}</p>
             </div>
         }
         {
             props.temperature ?
-            <div className="card card-body">
-            <p>
-                Location: {props.city},{props.country}
+            <div className="props">
+            <p className="location">
+                {props.city},{props.country}
             </p>
+            <p className="temperature">
+                {props.temperature} °C
+            </p>
+
+            <div className="description">
             <p>
-                Temperature: {props.temperature} °C, {props.description}
+                description: {props.description}
             </p>
             <p>
                 Humidity:{props.humidity}
@@ -26,9 +32,10 @@ const WeatherInfo = (props) =>{
             <p>
                 Wind speed: {props.wind_speed}
             </p>
+            </div>
         </div>
         : 
-        <div className="card card-body">
+        <div className="requisitos">
             <p>no hay requisitos</p>
         </div>
         }
